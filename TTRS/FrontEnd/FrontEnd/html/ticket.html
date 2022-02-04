@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train_Ticket_Reservation_System</title>
+    <link rel="stylesheet" href="ticket.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+
+    
+</head>
+<style>
+
+</style>
+<section id="home">
+    <nav id="navbar">
+        <table>
+            <div >
+                <h1>Book Tickets</h1>
+                    <ul>
+                        <li class="item3"><a href="login.html">Logout</a></li>  
+                    </ul>
+                </div>
+    
+        </table>
+    </nav>
+
+<body align="left">
+   
+<section class="inputt">
+    <div align="left" class="form">
+        <br>
+        <input type="text"  class="inp" id="f_name" placeholder="From"><br>
+        <input type="text" class="inp" id="t_name"><br><br>
+        <input id="btn"class="btn btn-outline-primary" type="submit" value="search" onclick="get_trains()"/>
+</div>  
+<br>
+<div  style="float: right;">
+<div id="trdata">
+ </div>
+</div>
+
+<br>
+    <div id=""content>
+    <div align="left" >
+                <br>
+                <input type="number"  class="inp" id="tr_no" placeholder="Enter train number"><br>
+                <input type="date" class="inp" id="da_te"><br><br>
+                <input id="btn"  type="submit" class="btn btn-outline-primary" value="contuinue" onclick="get_train()"/>
+    </div>  
+    <br>
+    <div align="right">
+        <div style="float: right;" id="tdata">
+         </div>
+        </div>
+
+    <br>
+
+    <div align="left" class="form2">
+        
+                <!-- <td align="center">Number of Passenger</td> -->
+                <input type="number"  class="inp"  id="pa_no"  placeholder="Enter Number of Passenger"><br>
+                <input type="text"  class="inp"  id="pa_na" placeholder="Name"/><br>
+                <input type="text"  class="inp"  id="pa_ag" placeholder="Age"/><br>
+                <input type="text" class="inp"   id="pa_gn" placeholder="Gender"/><br><br>
+                <input type="submit" class="btn btn-outline-primary"   onclick="add_pa()" value="Add" /><br>
+        
+    </div>  
+
+    <br> 
+    <div style="float: right;" id="padata">
+    </div>
+
+    <div >
+        
+         <input id="btn" type="submit" class="btn btn-outline-primary" value="Book Ticket" onclick="book_ticket()" />
+         <button class="btn btn-outline-primary"><a href="payment.html">Payment</a></button>
+         <!-- <a class="form-button" href="payment.html" role="button">Payment</a> -->
+   
+    </div>
+
+
+        <br> 
+    
+    <div >   
+        <div style="float: right;" id="tcdata">
+        </div>
+        <p>
+            <input id="generatePDF" type="submit" class="form-button" value="Download Ticket" onclick="download_ticket()" />
+        
+        </p>
+    </div>
+</div>
+    
+    </section>
+</section>
+
+</body>
+<script src="/js/ticket.js"></script>
+</html>
